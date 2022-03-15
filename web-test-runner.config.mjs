@@ -72,7 +72,7 @@ const checkScreenshot = async (filename, excluded, threshold) => {
       // Do the visual diff.
       const diff = new PNG({ width: img1.width, height: img2.height });
       const matchOptions = {
-        threshold: threshold || 0.3,
+        threshold: threshold || 0.1,
         includeAA: false,
         diffColor: [255, 0, 0],
         aaColor: [0, 0, 255],
@@ -174,7 +174,7 @@ const wireScreenshots = async (page, context) => {
           await page.screenshot({ path: testFile, clip });
 
           try {
-            const result = await checkScreenshot(filename);
+            const result = await checkScreenshot(filename, excluded, threshold);
             resolve(result);
           } catch (error) {
             reject(error);
@@ -272,7 +272,7 @@ export default {
     puppeteerLauncher({
       launchOptions: {
         args: [
-          '--font-render-hinting=medium',
+          '--font-render-hinting=none',
           '--force-color-profile=srgb',
           '--hide-scrollbars',
           '--disable-web-security',

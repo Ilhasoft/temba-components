@@ -109,11 +109,11 @@ after(() => {
   (window.fetch as any).restore();
 });
 
-export const mockGET = (endpoint: RegExp, body: any, headers: {} = {}) => {
+export const mockGET = (endpoint: RegExp, body: any, headers: any = {}) => {
   gets.push({ endpoint, body, headers });
 };
 
-export const mockPOST = (endpoint: RegExp, body: any, headers: {} = {}) => {
+export const mockPOST = (endpoint: RegExp, body: any, headers: any = {}) => {
   posts.push({ endpoint, body, headers });
 };
 
@@ -140,7 +140,7 @@ export const assertScreenshot = async (
   // (option: string) => option === '--screenshots'
   // );
 
-  // await (window as any).waitFor(300);
+  // await (window as any).waitFor(1500);
 
   // console.log((window as any).watched);
   if ((window as any).watched) {
