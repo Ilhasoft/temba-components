@@ -179,6 +179,8 @@ export const getClip = (ele: HTMLElement) => {
     clip = ele.shadowRoot.firstElementChild.getBoundingClientRect();
   }
 
+  console.log(clip, ele);
+
   const padding = 10;
   const width = clip.width + padding * 2;
   const height = clip.height + padding * 2;

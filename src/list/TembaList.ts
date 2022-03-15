@@ -73,22 +73,11 @@ export class TembaList extends RapidElement {
   static get styles() {
     return css`
       :host {
-        display: block;
-        height: 100%;
         width: 100%;
-      }
-
-      temba-options {
-        display: block;
-        width: 100%;
-        flex-grow: 1;
       }
 
       .wrapper {
-        display: flex;
-        flex-direction: column;
         height: 100%;
-        align-items: center;
       }
     `;
   }
@@ -433,7 +422,6 @@ export class TembaList extends RapidElement {
         .options=${this.items}
         .cursorIndex=${this.cursorIndex}
       >
-        <slot></slot>
       </temba-options>
     </div>`;
   }
