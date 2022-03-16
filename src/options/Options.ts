@@ -59,7 +59,7 @@ export class Options extends RapidElement {
       }
 
       :host([block]) .options {
-        margin-bottom: 1.5em;
+        // margin-bottom: 1.5em;
       }
 
       .options-scroll {
@@ -100,9 +100,8 @@ export class Options extends RapidElement {
       .option {
         font-size: var(--temba-options-font-size);
         padding: 5px 10px;
-        // padding: 0.5em 0.75em;
         border-radius: 4px;
-        margin: 0.3em;
+        margin: 4px;
         cursor: pointer;
         color: var(--color-text-dark);
       }
@@ -163,7 +162,7 @@ export class Options extends RapidElement {
       }
 
       .loading .loader-bar {
-        max-height: 1.1em;
+        // max-height: 1.1em;
       }
     `;
   }
@@ -624,7 +623,6 @@ export class Options extends RapidElement {
                 ${this.resolvedRenderOption(option, index === this.cursorIndex)}
               </div>`;
             })}
-            ${this.block ? html`<div style="height:0.1em"></div>` : null}
           </div>
           <slot></slot>
         </div>
