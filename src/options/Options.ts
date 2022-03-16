@@ -98,7 +98,7 @@ export class Options extends RapidElement {
       }
 
       .option {
-        // font-size: var(--temba-options-font-size);
+        font-size: var(--temba-options-font-size);
         padding: 5px 10px;
         // padding: 0.5em 0.75em;
         border-radius: 4px;

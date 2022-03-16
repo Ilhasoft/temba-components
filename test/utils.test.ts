@@ -102,7 +102,7 @@ const getResponse = (endpoint: string, options) => {
 before(async () => {
   normalFetch = window.fetch;
   stub(window, 'fetch').callsFake(getResponse);
-  await setViewport({ width: 1024, height: 768, deviceScaleFactor: 2 });
+  await setViewport({ width: 1024, height: 768, deviceScaleFactor: 1 });
 });
 
 after(() => {
@@ -179,7 +179,7 @@ export const getClip = (ele: HTMLElement) => {
     clip = ele.shadowRoot.firstElementChild.getBoundingClientRect();
   }
 
-  console.log(clip, ele);
+  // console.log(clip, ele);
 
   const padding = 10;
   const width = clip.width + padding * 2;

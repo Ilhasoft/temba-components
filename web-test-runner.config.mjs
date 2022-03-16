@@ -151,8 +151,8 @@ const wireScreenshots = async (page, context) => {
           let { width, height } = dimensions;
 
           // we should have a device ratio of 2
-          width /= 2;
-          height /= 2;
+          // width /= 2;
+          // height /= 2;
 
           const wDiff = Math.abs((clip.width - width) / width);
           const hDiff = Math.abs((clip.height - height) / height);
