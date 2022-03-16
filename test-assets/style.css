@@ -17,12 +17,9 @@ html input {
 html {
   --input-caret: transparent !important;
   --font-family: arial;
-  --font-size: 14px;
   --button-font-size: 1.125rem;
   
-  font-size: var(--font-size);
   font-family: var(--font-family);
-  font-weight: 300;
 
   --primary-rgb: 35, 135, 202;
   --secondary-rgb: 140, 51, 140;
@@ -123,7 +120,7 @@ html {
   --icon-color-hover: var(--icon-color);
   --event-padding: 0.5em 1em;
   --temba-select-selected-padding: 9px;
-  --temba-select-selected-line-height: 16px;
+  --temba-select-selected-line-height: normal;
   --temba-select-selected-font-size: 13px;
 
   --help-text-margin-top: 0px;

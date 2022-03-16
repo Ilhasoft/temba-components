@@ -34,7 +34,6 @@ export class CharCount extends RapidElement {
         border-radius: var(--curvature-widget);
         padding: 4px;
         text-align: center;
-        line-height: 20px;
         margin-right: 4px;
       }
 

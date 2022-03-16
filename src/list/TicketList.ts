@@ -33,7 +33,7 @@ export class TicketList extends TembaList {
           >
             <div style="flex: 1; color:#333;">
               <div
-                style="font-weight:400;line-height:1.6;border:0px solid purple;"
+                style="font-weight:400;line-height:1.6em;border:0px solid purple;"
               >
                 ${contact.name}
               </div>

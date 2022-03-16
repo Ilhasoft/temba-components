@@ -102,7 +102,7 @@ html input {
     --transition-speed: 250ms;
     --event-padding: 0.5em 1em;
     --temba-select-selected-padding: 9px;
-    --temba-select-selected-line-height: 16px;
+    --temba-select-selected-line-height: 1.1em;
     --temba-select-selected-font-size: 13px;
     
     --font-size: 14px;
