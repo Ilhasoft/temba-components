@@ -41,7 +41,6 @@ export class Checkbox extends FormElement {
         margin-left: 8px;
         font-weight: 300;
         font-size: 14px;
-        line-height: 19px;
         flex-grow: 1;
       }
 
