@@ -103,6 +103,7 @@ export class Options extends RapidElement {
         border-radius: 4px;
         margin: 4px;
         cursor: pointer;
+        line-height: 1.1;
         color: var(--color-text-dark);
       }
 
@@ -146,7 +147,7 @@ export class Options extends RapidElement {
 
       temba-loading {
         align-self: center;
-        margin-top: 0.025em;
+        // margin-top: 0.025em;
       }
 
       .loader-bar {
