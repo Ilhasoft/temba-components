@@ -271,6 +271,7 @@ export default {
   browsers: [
     puppeteerLauncher({
       launchOptions: {
+        product: 'firefox',
         args: [
           '--font-render-hinting=none',
           '--force-color-profile=srgb',
