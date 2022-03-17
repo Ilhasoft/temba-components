@@ -12,7 +12,7 @@ const getDialogClip = (dialog: Dialog) => {
 const getDialogHTML = (hideOnClick = false) => {
   return `
     <temba-dialog header="Hello Dialog" ${hideOnClick ? 'hideOnClick' : ''}>
-      <textarea name="comment" style="margin: 10px"></textarea>
+      <input type="text" name="comment" style="margin: 10px"/>
     </temba-dialog>
   `;
 };
@@ -89,7 +89,7 @@ describe('temba-dialog', () => {
     const dialog: Dialog = await fixture(getDialogHTML());
     await open(dialog);
 
-    const textarea = dialog.querySelector('textarea');
+    const textarea = dialog.querySelector('input');
     expect(document.activeElement).to.equal(textarea);
     await assertScreenshot('dialog/focused', getDialogClip(dialog));
   });
@@ -98,9 +98,8 @@ describe('temba-dialog', () => {
     const dialog: Dialog = await fixture(getDialogHTML(true));
     await open(dialog);
 
-    const mask: HTMLDivElement = dialog.shadowRoot.querySelector(
-      '#dialog-mask'
-    );
+    const mask: HTMLDivElement =
+      dialog.shadowRoot.querySelector('#dialog-mask');
     mask.click();
 
     await dialog.updateComplete;

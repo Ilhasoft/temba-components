@@ -36,7 +36,6 @@ export class Checkbox extends FormElement {
       }
 
       .checkbox-label {
-        font-family: var(--font-family);
         padding: 0px;
         margin-left: 8px;
         font-weight: 300;
