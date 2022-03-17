@@ -16,7 +16,7 @@ html input {
 
 html {
   --input-caret: transparent !important;
-  --font-family: arial;
+  --font-family: Roboto;
   --button-font-size: 1.125rem;
   
   font-family: var(--font-family);

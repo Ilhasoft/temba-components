@@ -147,13 +147,14 @@ const wireScreenshots = async (page, context) => {
           await page.screenshot({ path: truthFile, clip });
         } else {
           // if its close, force our file to be the same size as our truth for pixelmatch
-          const dimensions = sizeOf(truthFile);
-          let { width, height } = dimensions;
+          // const dimensions = sizeOf(truthFile);
+          // let { width, height } = dimensions;
 
           // we should have a device ratio of 2
           // width /= 2;
           // height /= 2;
 
+          /*
           const wDiff = Math.abs((clip.width - width) / width);
           const hDiff = Math.abs((clip.height - height) / height);
 
@@ -164,6 +165,7 @@ const wireScreenshots = async (page, context) => {
           if (hDiff < 0.15) {
             clip.height = height;
           }
+          */
 
           if (!clip.width || !clip.height) {
             reject({ message: "Couldn't take screenshot clip is empty" });

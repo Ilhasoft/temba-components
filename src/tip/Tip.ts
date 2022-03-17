@@ -9,7 +9,7 @@ export class Tip extends RapidElement {
   static get styles() {
     return css`
       .tip {
-        transition: opacity 200ms ease-in-out;
+        transition: opacity var(--transition-speed) ease-in-out;
         margin: 0px;
         position: fixed;
         opacity: 0;
