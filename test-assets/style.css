@@ -122,7 +122,8 @@ html {
   --temba-select-selected-padding: 9px;
   --temba-select-selected-line-height: normal;
   --temba-select-selected-font-size: 13px;
-
+  --temba-options-font-size: 1em;
+  
   --help-text-margin-top: 0px;
   --help-text-margin-left: 0.3em;
   --help-text-size: 0.85em;

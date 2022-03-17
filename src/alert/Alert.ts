@@ -42,7 +42,7 @@ export class Alert extends LitElement {
   public render(): TemplateResult {
     return html`
       <div class="temba-alert temba-${this.level}">
-        ${this.level === 'info' ? 'info' : ''}
+        <slot></slot>
       </div>
     `;
   }

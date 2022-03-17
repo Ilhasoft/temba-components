@@ -30,6 +30,7 @@ describe('temba-list', () => {
       endpoint: '/test-assets/list/temba-list.json',
     });
     expect(list.items.length).to.equal(4);
+    // debugger;
     await assertScreenshot('list/items', getClip(list));
   });
 

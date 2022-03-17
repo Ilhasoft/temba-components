@@ -103,7 +103,6 @@ export class Options extends RapidElement {
         border-radius: 4px;
         margin: 4px;
         cursor: pointer;
-        line-height: 1.1;
         color: var(--color-text-dark);
       }
 
