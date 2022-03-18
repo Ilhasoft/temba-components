@@ -10,21 +10,17 @@ body {
   padding: 20px;
 }
 
-html input {
-  font-weight: 300;
-}
-
 html {
+
   --transition-speed: 0ms !important;
   --input-caret: transparent !important;
   --font-family: 'Times New Roman';
   --button-font-size: 1.125rem;
-  
-  font-family: var(--font-family);
-
   --primary-rgb: 35, 135, 202;
   --secondary-rgb: 140, 51, 140;
   --tertiary-rgb: 135, 202, 35;
+
+  font-family: var(--font-family);
 
   --focus-rgb: 82, 168, 236;
   --error-rgb: 255, 99, 71;
