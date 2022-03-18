@@ -102,7 +102,7 @@ const getResponse = (endpoint: string, options) => {
 before(async () => {
   normalFetch = window.fetch;
   stub(window, 'fetch').callsFake(getResponse);
-  await setViewport({ width: 1024, height: 768, deviceScaleFactor: 2 });
+  await setViewport({ width: 1024, height: 768, deviceScaleFactor: 1 });
 });
 
 after(() => {
@@ -133,7 +133,7 @@ export const delay = (millis: number) => {
 export const assertScreenshot = async (
   filename: string,
   clip: Clip,
-  threshold = 0.1,
+  threshold = 0.8,
   exclude: Clip[] = []
 ) => {
   // const screenShotsEnabled = !!__karma__.config.args.find(

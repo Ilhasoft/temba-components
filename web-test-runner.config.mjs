@@ -154,7 +154,6 @@ const wireScreenshots = async (page, context) => {
           width /= 2;
           height /= 2;
 
-          
           const wDiff = Math.abs((clip.width - width) / width);
           const hDiff = Math.abs((clip.height - height) / height);
 
@@ -165,7 +164,6 @@ const wireScreenshots = async (page, context) => {
           if (hDiff < 0.15) {
             clip.height = height;
           }
-          
 
           if (!clip.width || !clip.height) {
             reject({ message: "Couldn't take screenshot clip is empty" });
