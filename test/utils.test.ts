@@ -133,7 +133,7 @@ export const delay = (millis: number) => {
 export const assertScreenshot = async (
   filename: string,
   clip: Clip,
-  threshold = 0.8,
+  threshold = 0.95,
   exclude: Clip[] = []
 ) => {
   // const screenShotsEnabled = !!__karma__.config.args.find(
