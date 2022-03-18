@@ -14,7 +14,7 @@ html {
 
   --transition-speed: 0ms !important;
   --input-caret: transparent !important;
-  --font-family: 'Times New Roman';
+  --font-family: Roboto;
   --button-font-size: 1.125rem;
   --primary-rgb: 35, 135, 202;
   --secondary-rgb: 140, 51, 140;
