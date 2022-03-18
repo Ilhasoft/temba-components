@@ -14,7 +14,7 @@ jobs:
       - name: Screen resolution
         run: |
           system_profiler SPDisplaysDataType | grep Resolution
-          "/Library/Application Support/VMware Tools/vmware-resolutionSet" 1920 1080
+          "/Library/Application Support/VMware Tools/vmware-resolutionSet" 3840 2160
           system_profiler SPDisplaysDataType | grep Resolution
       - name: Screenshot Tests
         run: |
