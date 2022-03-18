@@ -17,7 +17,7 @@ html input {
 html {
   --transition-speed: 0ms !important;
   --input-caret: transparent !important;
-  --font-family: Roboto;
+  --font-family: 'Times New Roman';
   --button-font-size: 1.125rem;
   
   font-family: var(--font-family);

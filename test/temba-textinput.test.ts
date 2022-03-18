@@ -176,7 +176,6 @@ describe('temba-textinput', () => {
         name: 'message',
         value: 'hello world',
         label: 'Your Message',
-        // eslint-disable-next-line @typescript-eslint/camelcase
         help_text: 'Enter your message here',
       })
     );
@@ -206,7 +205,6 @@ describe('temba-textinput', () => {
         label: 'Your Date',
         datepicker: true,
         placeholder: 'Select a date',
-        // eslint-disable-next-line @typescript-eslint/camelcase
         help_text: 'Dates can be helpful',
       })
     );
@@ -241,6 +239,8 @@ describe('temba-textinput', () => {
     // account for the portaled date picker
     clip.height += 325;
     clip.width += 55;
+
+    await waitFor(500);
 
     await assertScreenshot('textinput/date-initialized', clip);
   });
