@@ -78,7 +78,11 @@ export const getUrl = (
             // eslint-disable-next-line no-empty
           } catch (err) {}
 
+          console.log('[DEBUG] response:', response);
+          console.log('[DEBUG] body:', body);
+          console.log('[DEBUG] json:', json);
           if (response.status === 403 && json['refresh_url']) {
+            console.log('[DEBUG] met condition, starting second fetch');
             return new Promise((resolve, reject) => {
               fetch(json['refresh_url'], options).then(response =>
                 response
@@ -89,6 +93,11 @@ export const getUrl = (
                       json = JSON.parse(body);
                       // eslint-disable-next-line no-empty
                     } catch (err) {}
+
+                    console.log(
+                      '[DEBUG] inside second fetch response:',
+                      response
+                    );
 
                     resolve({
                       controller,
