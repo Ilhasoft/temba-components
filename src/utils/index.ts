@@ -79,7 +79,7 @@ export const getUrl = (
           } catch (err) {}
 
           if (response.status === 403 && json['refresh_url']) {
-            resolve(getUrl(json['refresh_url'], controller, headers));
+            return getUrl(json['refresh_url'], controller, headers);
           }
 
           resolve({
