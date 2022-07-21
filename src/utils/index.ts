@@ -77,6 +77,11 @@ export const getUrl = (
             json = JSON.parse(body);
             // eslint-disable-next-line no-empty
           } catch (err) {}
+
+          if (response.status === 403 && json['refresh_url']) {
+            resolve(getUrl(json['refresh_url'], controller, headers));
+          }
+
           resolve({
             controller,
             body,
