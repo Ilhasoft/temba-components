@@ -79,7 +79,28 @@ export const getUrl = (
           } catch (err) {}
 
           if (response.status === 403 && json['refresh_url']) {
-            return getUrl(json['refresh_url'], controller, headers);
+            return new Promise((resolve, reject) => {
+              fetch(json['refresh_url'], options).then(response =>
+                response
+                  .text()
+                  .then((body: string) => {
+                    let json = {};
+                    try {
+                      json = JSON.parse(body);
+                      // eslint-disable-next-line no-empty
+                    } catch (err) {}
+
+                    resolve({
+                      controller,
+                      body,
+                      json,
+                      headers: response.headers,
+                      status: response.status,
+                    });
+                  })
+                  .catch(error => reject(error))
+              );
+            });
           }
 
           resolve({
